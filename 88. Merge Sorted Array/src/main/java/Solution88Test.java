@@ -22,16 +22,6 @@ public class Solution88Test {
         System.out.println(Arrays.toString(nums1));
         Assertions.assertArrayEquals(expected, nums1);
     }
-//1,2,3:2,5,6:i=0,k=0
-//1,2,3:2,5,6:i=1,k=0
-//1,2,2:3,5,6:i=2,k=1
-//1,2,2,5:3,0,6:i=0,k=0
-
-    //4,5,6:1,2,3
-//1,5,6:4,2,3
-//1,2,6:4,5,3
-//1,2,3:4,5,6
-//1,2,3,4
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int[] tempArr = new int[m];
         System.arraycopy(nums1, 0, tempArr, 0, m);
