@@ -5,7 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-public class Solution2 {
+public class Solution2Test {
 
     public static Stream<Arguments> cases() {
         return Stream.of(
@@ -18,11 +18,8 @@ public class Solution2 {
     @ParameterizedTest
     @MethodSource("cases")
     void test(int[] input, int expected) {
-        Assertions.assertEquals(expected, new Solution2().maxProfit(input));
+        Assertions.assertEquals(expected, maxProfit(input));
     }
-    //find max and min, then split the array into subarrays, repeat
-    // calculate profits all to all, find the combination with max
-    // keep it while it's growing
 
     public int maxProfit(int[] prices) {
         int bought = prices[0];
